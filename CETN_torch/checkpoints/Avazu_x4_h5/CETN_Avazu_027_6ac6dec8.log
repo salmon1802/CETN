@@ -1,0 +1,122 @@
+2023-10-18 11:08:37,605 P346883 INFO Params: {
+    "V_net_dropout": "0",
+    "W_net_dropout": "0",
+    "alpha": "0.1",
+    "batch_norm": "False",
+    "batch_size": "10000",
+    "beta": "0.2",
+    "cl_temperature": "0.4",
+    "data_format": "h5",
+    "data_root": "../../../data/",
+    "dataset_id": "Avazu_x4_h5",
+    "debug_mode": "False",
+    "delta": "0.1",
+    "early_stop_patience": "2",
+    "embedding_dim": "20",
+    "embedding_regularizer": "0",
+    "epochs": "100",
+    "eps": "1e-05",
+    "eval_steps": "None",
+    "feature_cols": "[{'active': False, 'dtype': 'str', 'name': 'id', 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'name': 'hour', 'preprocess': 'convert_hour', 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'name': ['C1', 'banner_pos', 'site_id', 'site_domain', 'site_category', 'app_id', 'app_domain', 'app_category', 'device_id', 'device_ip', 'device_model', 'device_type', 'device_conn_type', 'C14', 'C15', 'C16', 'C17', 'C18', 'C19', 'C20', 'C21'], 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'name': 'weekday', 'preprocess': 'convert_weekday', 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'name': 'weekend', 'preprocess': 'convert_weekend', 'type': 'categorical'}]",
+    "feature_config": "None",
+    "feature_specs": "None",
+    "fi_hidden_units": "[512, 512, 512]",
+    "gpu": "1",
+    "group_id": "None",
+    "hidden_activations": "['leaky_relu', 'leaky_relu', 'leaky_relu']",
+    "label_col": "{'dtype': 'float', 'name': 'click'}",
+    "learning_rate": "0.001",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "2",
+    "model": "CETN",
+    "model_id": "CETN_Avazu_027_6ac6dec8",
+    "model_root": "./checkpoints/",
+    "monitor": "{'AUC': 1, 'logloss': -1}",
+    "monitor_mode": "max",
+    "net_regularizer": "0",
+    "num_workers": "3",
+    "optimizer": "adam",
+    "perturbed": "False",
+    "pickle_feature_encoder": "True",
+    "save_best_only": "True",
+    "seed": "2023",
+    "shuffle": "True",
+    "task": "binary_classification",
+    "test_data": "../../../data/Avazu_x4_h5/test.h5",
+    "through": "True",
+    "train_data": "../../../data/Avazu_x4_h5/train.h5",
+    "use_features": "None",
+    "valid_data": "../../../data/Avazu_x4_h5/valid.h5",
+    "verbose": "1",
+    "w_hidden_units": "[512, 512, 512]"
+}
+2023-10-18 11:08:37,605 P346883 INFO Load feature_map from json: ../../../data/Avazu_x4_h5/feature_map.json
+2023-10-18 11:08:37,605 P346883 INFO Set column index...
+2023-10-18 11:08:37,605 P346883 INFO Feature specs: {
+    "C1": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 8, 'vocab_size': 9}",
+    "C14": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 2555, 'vocab_size': 2556}",
+    "C15": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 9, 'vocab_size': 10}",
+    "C16": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 10, 'vocab_size': 11}",
+    "C17": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 433, 'vocab_size': 434}",
+    "C18": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 5, 'vocab_size': 6}",
+    "C19": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 69, 'vocab_size': 70}",
+    "C20": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 172, 'vocab_size': 173}",
+    "C21": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 61, 'vocab_size': 62}",
+    "app_category": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 32, 'vocab_size': 33}",
+    "app_domain": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 399, 'vocab_size': 400}",
+    "app_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 6544, 'vocab_size': 6545}",
+    "banner_pos": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 8, 'vocab_size': 9}",
+    "device_conn_type": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 5, 'vocab_size': 6}",
+    "device_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 820508, 'vocab_size': 820509}",
+    "device_ip": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 2903321, 'vocab_size': 2903322}",
+    "device_model": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 7258, 'vocab_size': 7259}",
+    "device_type": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 6, 'vocab_size': 7}",
+    "hour": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 25, 'vocab_size': 26}",
+    "site_category": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 26, 'vocab_size': 27}",
+    "site_domain": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 5460, 'vocab_size': 5461}",
+    "site_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 4050, 'vocab_size': 4051}",
+    "weekday": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 8, 'vocab_size': 9}",
+    "weekend": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3, 'vocab_size': 4}"
+}
+2023-10-18 11:08:42,204 P346883 INFO Total number of parameters: 85120722.
+2023-10-18 11:08:42,205 P346883 INFO Loading data...
+2023-10-18 11:08:42,205 P346883 INFO Loading data from h5: ../../../data/Avazu_x4_h5/train.h5
+2023-10-18 11:08:51,582 P346883 INFO Train samples: total/32343172, blocks/1
+2023-10-18 11:08:51,582 P346883 INFO Loading data from h5: ../../../data/Avazu_x4_h5/valid.h5
+2023-10-18 11:08:52,749 P346883 INFO Validation samples: total/4042897, blocks/1
+2023-10-18 11:08:52,749 P346883 INFO Loading train and validation data done.
+2023-10-18 11:08:52,749 P346883 INFO Start training: 3235 batches/epoch
+2023-10-18 11:08:52,749 P346883 INFO ************ Epoch=1 start ************
+2023-10-18 11:11:43,735 P346883 INFO Train loss: 1.004227
+2023-10-18 11:11:43,735 P346883 INFO Evaluation @epoch 1 - batch 3235: 
+2023-10-18 11:11:54,181 P346883 INFO ===
+2023-10-18 11:11:54,181 P346883 INFO [Metrics] AUC: 0.795888 - logloss: 0.370537
+2023-10-18 11:11:54,188 P346883 INFO Save best model: monitor(max)=0.425351
+2023-10-18 11:11:54,953 P346883 INFO ************ Epoch=1 end ************
+2023-10-18 11:14:50,215 P346883 INFO Train loss: 0.948218
+2023-10-18 11:14:50,215 P346883 INFO Evaluation @epoch 2 - batch 3235: 
+2023-10-18 11:15:00,075 P346883 INFO ===
+2023-10-18 11:15:00,075 P346883 INFO [Metrics] AUC: 0.791395 - logloss: 0.377664
+2023-10-18 11:15:00,082 P346883 INFO Monitor(max)=0.413731 STOP!
+2023-10-18 11:15:00,082 P346883 INFO Reduce learning rate on plateau: 0.000100
+2023-10-18 11:15:00,381 P346883 INFO ************ Epoch=2 end ************
+2023-10-18 11:17:51,043 P346883 INFO Train loss: 0.897210
+2023-10-18 11:17:51,043 P346883 INFO Evaluation @epoch 3 - batch 3235: 
+2023-10-18 11:18:00,735 P346883 INFO ===
+2023-10-18 11:18:00,735 P346883 INFO [Metrics] AUC: 0.774607 - logloss: 0.431738
+2023-10-18 11:18:00,741 P346883 INFO Monitor(max)=0.342869 STOP!
+2023-10-18 11:18:00,741 P346883 INFO Reduce learning rate on plateau: 0.000010
+2023-10-18 11:18:00,741 P346883 INFO ********* Epoch==3 early stop *********
+2023-10-18 11:18:01,087 P346883 INFO Training finished.
+2023-10-18 11:18:01,087 P346883 INFO Load best model: /root/autodl-tmp/model_zoo/CETN/CETN_torch/checkpoints/Avazu_x4_h5/CETN_Avazu_027_6ac6dec8.model
+2023-10-18 11:18:01,270 P346883 INFO ****** Validation evaluation ******
+2023-10-18 11:18:11,047 P346883 INFO ===
+2023-10-18 11:18:11,048 P346883 INFO [Metrics] logloss: 0.370537 - AUC: 0.795888
+2023-10-18 11:18:11,452 P346883 INFO ******** Test evaluation ********
+2023-10-18 11:18:11,452 P346883 INFO Loading data...
+2023-10-18 11:18:11,452 P346883 INFO Loading data from h5: ../../../data/Avazu_x4_h5/test.h5
+2023-10-18 11:18:12,630 P346883 INFO Test samples: total/4042898, blocks/1
+2023-10-18 11:18:12,631 P346883 INFO Loading test data done.
+2023-10-18 11:18:21,936 P346883 INFO ===
+2023-10-18 11:18:21,936 P346883 INFO [Metrics] logloss: 0.370466 - AUC: 0.796005

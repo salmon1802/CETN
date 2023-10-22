@@ -1,0 +1,192 @@
+2023-10-16 21:14:47,177 P439338 INFO Params: {
+    "V_net_dropout": "0.2",
+    "W_net_dropout": "0.2",
+    "alpha": "0.2",
+    "batch_norm": "False",
+    "batch_size": "10000",
+    "beta": "0.2",
+    "cl_temperature": "0.6",
+    "data_format": "h5",
+    "data_root": "../../../data/",
+    "dataset_id": "Criteo_x4_h5",
+    "debug_mode": "False",
+    "delta": "0.2",
+    "early_stop_patience": "2",
+    "embedding_dim": "20",
+    "embedding_regularizer": "0.0001",
+    "epochs": "100",
+    "eps": "1e-05",
+    "eval_steps": "None",
+    "feature_cols": "[{'active': True, 'dtype': 'float', 'fill_na': 0, 'name': ['I1', 'I2', 'I3', 'I4', 'I5', 'I6', 'I7', 'I8', 'I9', 'I10', 'I11', 'I12', 'I13'], 'preprocess': 'convert_to_bucket', 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'fill_na': '', 'name': ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9', 'C10', 'C11', 'C12', 'C13', 'C14', 'C15', 'C16', 'C17', 'C18', 'C19', 'C20', 'C21', 'C22', 'C23', 'C24', 'C25', 'C26'], 'type': 'categorical'}]",
+    "feature_config": "None",
+    "feature_specs": "None",
+    "fi_hidden_units": "[1024, 512, 256]",
+    "gpu": "1",
+    "group_id": "None",
+    "hidden_activations": "['mish', 'leaky_relu', 'prelu']",
+    "label_col": "{'dtype': 'float', 'name': 'Label'}",
+    "learning_rate": "0.0005",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "2",
+    "model": "CETN",
+    "model_id": "CETN_Criteo_028_b4829c32",
+    "model_root": "./checkpoints/",
+    "monitor": "{'AUC': 1, 'logloss': -1}",
+    "monitor_mode": "max",
+    "net_regularizer": "0",
+    "num_workers": "3",
+    "optimizer": "adam",
+    "perturbed": "False",
+    "pickle_feature_encoder": "True",
+    "save_best_only": "True",
+    "seed": "2023",
+    "shuffle": "True",
+    "task": "binary_classification",
+    "test_data": "../../../data/Criteo_x4_h5/test.h5",
+    "through": "True",
+    "train_data": "../../../data/Criteo_x4_h5/train.h5",
+    "use_features": "None",
+    "valid_data": "../../../data/Criteo_x4_h5/valid.h5",
+    "verbose": "1",
+    "w_hidden_units": "[512, 512]"
+}
+2023-10-16 21:14:47,178 P439338 INFO Load feature_map from json: ../../../data/Criteo_x4_h5/feature_map.json
+2023-10-16 21:14:47,178 P439338 INFO Set column index...
+2023-10-16 21:14:47,178 P439338 INFO Feature specs: {
+    "C1": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 1461, 'vocab_size': 1462}",
+    "C10": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 70514, 'vocab_size': 70515}",
+    "C11": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 5517, 'vocab_size': 5518}",
+    "C12": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 1224132, 'vocab_size': 1224133}",
+    "C13": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3193, 'vocab_size': 3194}",
+    "C14": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 28, 'vocab_size': 29}",
+    "C15": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 13600, 'vocab_size': 13601}",
+    "C16": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 1004793, 'vocab_size': 1004794}",
+    "C17": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 11, 'vocab_size': 12}",
+    "C18": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 5230, 'vocab_size': 5231}",
+    "C19": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 2144, 'vocab_size': 2145}",
+    "C2": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 563, 'vocab_size': 564}",
+    "C20": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 4, 'vocab_size': 5}",
+    "C21": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 1162912, 'vocab_size': 1162913}",
+    "C22": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 18, 'vocab_size': 19}",
+    "C23": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 16, 'vocab_size': 17}",
+    "C24": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 141672, 'vocab_size': 141673}",
+    "C25": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 101, 'vocab_size': 102}",
+    "C26": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 92085, 'vocab_size': 92086}",
+    "C3": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 1244768, 'vocab_size': 1244769}",
+    "C4": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 562022, 'vocab_size': 562023}",
+    "C5": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 306, 'vocab_size': 307}",
+    "C6": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 22, 'vocab_size': 23}",
+    "C7": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 12368, 'vocab_size': 12369}",
+    "C8": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 634, 'vocab_size': 635}",
+    "C9": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 4, 'vocab_size': 5}",
+    "I1": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 53, 'vocab_size': 54}",
+    "I10": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 6, 'vocab_size': 7}",
+    "I11": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 26, 'vocab_size': 27}",
+    "I12": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 47, 'vocab_size': 48}",
+    "I13": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 76, 'vocab_size': 77}",
+    "I2": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 104, 'vocab_size': 105}",
+    "I3": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 123, 'vocab_size': 124}",
+    "I4": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 45, 'vocab_size': 46}",
+    "I5": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 220, 'vocab_size': 221}",
+    "I6": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 133, 'vocab_size': 134}",
+    "I7": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 90, 'vocab_size': 91}",
+    "I8": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 76, 'vocab_size': 77}",
+    "I9": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 96, 'vocab_size': 97}"
+}
+2023-10-16 21:14:52,714 P439338 INFO Total number of parameters: 140107862.
+2023-10-16 21:14:52,714 P439338 INFO Loading data...
+2023-10-16 21:14:52,714 P439338 INFO Loading data from h5: ../../../data/Criteo_x4_h5/train.h5
+2023-10-16 21:15:11,104 P439338 INFO Train samples: total/36672493, blocks/1
+2023-10-16 21:15:11,104 P439338 INFO Loading data from h5: ../../../data/Criteo_x4_h5/valid.h5
+2023-10-16 21:15:13,394 P439338 INFO Validation samples: total/4584062, blocks/1
+2023-10-16 21:15:13,394 P439338 INFO Loading train and validation data done.
+2023-10-16 21:15:13,394 P439338 INFO Start training: 3668 batches/epoch
+2023-10-16 21:15:13,394 P439338 INFO ************ Epoch=1 start ************
+2023-10-16 21:20:22,835 P439338 INFO Train loss: 1.964840
+2023-10-16 21:20:22,835 P439338 INFO Evaluation @epoch 1 - batch 3668: 
+2023-10-16 21:20:37,390 P439338 INFO ===
+2023-10-16 21:20:37,391 P439338 INFO [Metrics] AUC: 0.805105 - logloss: 0.446594
+2023-10-16 21:20:37,403 P439338 INFO Save best model: monitor(max)=0.358511
+2023-10-16 21:20:38,564 P439338 INFO ************ Epoch=1 end ************
+2023-10-16 21:25:48,110 P439338 INFO Train loss: 1.955847
+2023-10-16 21:25:48,110 P439338 INFO Evaluation @epoch 2 - batch 3668: 
+2023-10-16 21:26:02,933 P439338 INFO ===
+2023-10-16 21:26:02,933 P439338 INFO [Metrics] AUC: 0.807016 - logloss: 0.445486
+2023-10-16 21:26:02,940 P439338 INFO Save best model: monitor(max)=0.361530
+2023-10-16 21:26:04,221 P439338 INFO ************ Epoch=2 end ************
+2023-10-16 21:31:14,095 P439338 INFO Train loss: 1.953853
+2023-10-16 21:31:14,095 P439338 INFO Evaluation @epoch 3 - batch 3668: 
+2023-10-16 21:31:28,982 P439338 INFO ===
+2023-10-16 21:31:28,982 P439338 INFO [Metrics] AUC: 0.808041 - logloss: 0.443338
+2023-10-16 21:31:28,989 P439338 INFO Save best model: monitor(max)=0.364703
+2023-10-16 21:31:30,409 P439338 INFO ************ Epoch=3 end ************
+2023-10-16 21:36:40,028 P439338 INFO Train loss: 1.952779
+2023-10-16 21:36:40,028 P439338 INFO Evaluation @epoch 4 - batch 3668: 
+2023-10-16 21:36:55,078 P439338 INFO ===
+2023-10-16 21:36:55,078 P439338 INFO [Metrics] AUC: 0.808500 - logloss: 0.442880
+2023-10-16 21:36:55,085 P439338 INFO Save best model: monitor(max)=0.365619
+2023-10-16 21:36:56,482 P439338 INFO ************ Epoch=4 end ************
+2023-10-16 21:42:06,029 P439338 INFO Train loss: 1.952141
+2023-10-16 21:42:06,029 P439338 INFO Evaluation @epoch 5 - batch 3668: 
+2023-10-16 21:42:20,958 P439338 INFO ===
+2023-10-16 21:42:20,958 P439338 INFO [Metrics] AUC: 0.809049 - logloss: 0.442409
+2023-10-16 21:42:20,965 P439338 INFO Save best model: monitor(max)=0.366640
+2023-10-16 21:42:22,402 P439338 INFO ************ Epoch=5 end ************
+2023-10-16 21:47:31,917 P439338 INFO Train loss: 1.951694
+2023-10-16 21:47:31,918 P439338 INFO Evaluation @epoch 6 - batch 3668: 
+2023-10-16 21:47:46,965 P439338 INFO ===
+2023-10-16 21:47:46,966 P439338 INFO [Metrics] AUC: 0.809385 - logloss: 0.442108
+2023-10-16 21:47:46,973 P439338 INFO Save best model: monitor(max)=0.367277
+2023-10-16 21:47:48,164 P439338 INFO ************ Epoch=6 end ************
+2023-10-16 21:52:57,846 P439338 INFO Train loss: 1.951344
+2023-10-16 21:52:57,846 P439338 INFO Evaluation @epoch 7 - batch 3668: 
+2023-10-16 21:53:12,608 P439338 INFO ===
+2023-10-16 21:53:12,609 P439338 INFO [Metrics] AUC: 0.809595 - logloss: 0.441919
+2023-10-16 21:53:12,616 P439338 INFO Save best model: monitor(max)=0.367676
+2023-10-16 21:53:13,803 P439338 INFO ************ Epoch=7 end ************
+2023-10-16 21:58:23,377 P439338 INFO Train loss: 1.951087
+2023-10-16 21:58:23,377 P439338 INFO Evaluation @epoch 8 - batch 3668: 
+2023-10-16 21:58:38,278 P439338 INFO ===
+2023-10-16 21:58:38,278 P439338 INFO [Metrics] AUC: 0.809619 - logloss: 0.442019
+2023-10-16 21:58:38,284 P439338 INFO Monitor(max)=0.367600 STOP!
+2023-10-16 21:58:38,284 P439338 INFO Reduce learning rate on plateau: 0.000050
+2023-10-16 21:58:38,534 P439338 INFO ************ Epoch=8 end ************
+2023-10-16 22:03:48,361 P439338 INFO Train loss: 1.933694
+2023-10-16 22:03:48,361 P439338 INFO Evaluation @epoch 9 - batch 3668: 
+2023-10-16 22:04:03,287 P439338 INFO ===
+2023-10-16 22:04:03,287 P439338 INFO [Metrics] AUC: 0.813583 - logloss: 0.438287
+2023-10-16 22:04:03,297 P439338 INFO Save best model: monitor(max)=0.375295
+2023-10-16 22:04:04,450 P439338 INFO ************ Epoch=9 end ************
+2023-10-16 22:09:13,943 P439338 INFO Train loss: 1.928234
+2023-10-16 22:09:13,944 P439338 INFO Evaluation @epoch 10 - batch 3668: 
+2023-10-16 22:09:29,030 P439338 INFO ===
+2023-10-16 22:09:29,030 P439338 INFO [Metrics] AUC: 0.814138 - logloss: 0.437842
+2023-10-16 22:09:29,036 P439338 INFO Save best model: monitor(max)=0.376296
+2023-10-16 22:09:30,217 P439338 INFO ************ Epoch=10 end ************
+2023-10-16 22:14:39,981 P439338 INFO Train loss: 1.925599
+2023-10-16 22:14:39,981 P439338 INFO Evaluation @epoch 11 - batch 3668: 
+2023-10-16 22:14:54,844 P439338 INFO ===
+2023-10-16 22:14:54,845 P439338 INFO [Metrics] AUC: 0.813946 - logloss: 0.438288
+2023-10-16 22:14:54,851 P439338 INFO Monitor(max)=0.375658 STOP!
+2023-10-16 22:14:54,851 P439338 INFO Reduce learning rate on plateau: 0.000005
+2023-10-16 22:14:55,100 P439338 INFO ************ Epoch=11 end ************
+2023-10-16 22:20:04,887 P439338 INFO Train loss: 1.916369
+2023-10-16 22:20:04,887 P439338 INFO Evaluation @epoch 12 - batch 3668: 
+2023-10-16 22:20:19,776 P439338 INFO ===
+2023-10-16 22:20:19,776 P439338 INFO [Metrics] AUC: 0.811591 - logloss: 0.441526
+2023-10-16 22:20:19,788 P439338 INFO Monitor(max)=0.370064 STOP!
+2023-10-16 22:20:19,788 P439338 INFO Reduce learning rate on plateau: 0.000001
+2023-10-16 22:20:19,788 P439338 INFO ********* Epoch==12 early stop *********
+2023-10-16 22:20:20,218 P439338 INFO Training finished.
+2023-10-16 22:20:20,218 P439338 INFO Load best model: /root/autodl-tmp/model_zoo/CETN/CETN_torch/checkpoints/Criteo_x4_h5/CETN_Criteo_028_b4829c32.model
+2023-10-16 22:20:20,534 P439338 INFO ****** Validation evaluation ******
+2023-10-16 22:20:35,578 P439338 INFO ===
+2023-10-16 22:20:35,578 P439338 INFO [Metrics] logloss: 0.437842 - AUC: 0.814138
+2023-10-16 22:20:36,144 P439338 INFO ******** Test evaluation ********
+2023-10-16 22:20:36,144 P439338 INFO Loading data...
+2023-10-16 22:20:36,144 P439338 INFO Loading data from h5: ../../../data/Criteo_x4_h5/test.h5
+2023-10-16 22:20:38,280 P439338 INFO Test samples: total/4584062, blocks/1
+2023-10-16 22:20:38,280 P439338 INFO Loading test data done.
+2023-10-16 22:20:53,300 P439338 INFO ===
+2023-10-16 22:20:53,301 P439338 INFO [Metrics] logloss: 0.437409 - AUC: 0.814637

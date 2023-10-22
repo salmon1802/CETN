@@ -1,0 +1,183 @@
+2023-10-21 09:59:19,900 P287285 INFO Params: {
+    "V_net_dropout": "0.2",
+    "W_net_dropout": "0.4",
+    "alpha": "0.8",
+    "batch_norm": "False",
+    "batch_size": "10000",
+    "beta": "0.3",
+    "cl_temperature": "0.5",
+    "data_format": "csv",
+    "data_root": "../../../data/",
+    "dataset_id": "Movielenslatest_x1_h5",
+    "debug_mode": "False",
+    "delta": "0.6",
+    "early_stop_patience": "2",
+    "embedding_dim": "20",
+    "embedding_regularizer": "0.01",
+    "epochs": "100",
+    "eps": "1e-05",
+    "eval_steps": "None",
+    "feature_cols": "[{'active': True, 'dtype': 'float', 'name': ['user_id', 'item_id', 'tag_id'], 'type': 'categorical'}]",
+    "feature_config": "None",
+    "feature_specs": "None",
+    "fi_hidden_units": "[400]",
+    "gpu": "1",
+    "group_id": "None",
+    "hidden_activations": "['dice', 'dice', 'dice']",
+    "label_col": "{'dtype': 'float', 'name': 'label'}",
+    "learning_rate": "0.001",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "2",
+    "model": "CETN",
+    "model_id": "CETN_Movielens_3757_578e4710",
+    "model_root": "./checkpoints/",
+    "monitor": "{'AUC': 1, 'logloss': -1}",
+    "monitor_mode": "max",
+    "net_regularizer": "0",
+    "num_workers": "3",
+    "optimizer": "adam",
+    "perturbed": "False",
+    "pickle_feature_encoder": "True",
+    "save_best_only": "True",
+    "seed": "2023",
+    "shuffle": "True",
+    "task": "binary_classification",
+    "test_data": "../../../data/MovielensLatest_x1_h5/test.h5",
+    "through": "True",
+    "train_data": "../../../data/MovielensLatest_x1_h5/train.h5",
+    "use_features": "None",
+    "valid_data": "../../../data/MovielensLatest_x1_h5/valid.h5",
+    "verbose": "1",
+    "w_hidden_units": "[800]"
+}
+2023-10-21 09:59:19,901 P287285 INFO Set up feature processor...
+2023-10-21 09:59:19,901 P287285 WARNING Skip rebuilding ../../../data/Movielenslatest_x1_h5/feature_map.json. Please delete it manually if rebuilding is required.
+2023-10-21 09:59:19,901 P287285 INFO Load feature_map from json: ../../../data/Movielenslatest_x1_h5/feature_map.json
+2023-10-21 09:59:19,901 P287285 INFO Set column index...
+2023-10-21 09:59:19,901 P287285 INFO Feature specs: {
+    "item_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 22574, 'vocab_size': 22575}",
+    "tag_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 49658, 'vocab_size': 49659}",
+    "user_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 16361, 'vocab_size': 16362}"
+}
+2023-10-21 09:59:25,964 P287285 INFO Total number of parameters: 2003526.
+2023-10-21 09:59:25,965 P287285 INFO Loading data...
+2023-10-21 09:59:25,965 P287285 INFO Loading data from h5: ../../../data/Movielenslatest_x1_h5/train.h5
+2023-10-21 09:59:26,023 P287285 INFO Train samples: total/1404801, blocks/1
+2023-10-21 09:59:26,023 P287285 INFO Loading data from h5: ../../../data/Movielenslatest_x1_h5/valid.h5
+2023-10-21 09:59:26,031 P287285 INFO Validation samples: total/401372, blocks/1
+2023-10-21 09:59:26,031 P287285 INFO Loading train and validation data done.
+2023-10-21 09:59:26,031 P287285 INFO Start training: 141 batches/epoch
+2023-10-21 09:59:26,031 P287285 INFO ************ Epoch=1 start ************
+2023-10-21 09:59:30,186 P287285 INFO Train loss: 5.813810
+2023-10-21 09:59:30,186 P287285 INFO Evaluation @epoch 1 - batch 141:
+2023-10-21 09:59:31,756 P287285 INFO ===
+2023-10-21 09:59:31,756 P287285 INFO [Metrics] AUC: 0.912325 - logloss: 0.397294
+2023-10-21 09:59:31,756 P287285 INFO Save best model: monitor(max)=0.515031
+2023-10-21 09:59:31,985 P287285 INFO ************ Epoch=1 end ************
+2023-10-21 09:59:35,706 P287285 INFO Train loss: 5.415614
+2023-10-21 09:59:35,706 P287285 INFO Evaluation @epoch 2 - batch 141:
+2023-10-21 09:59:37,303 P287285 INFO ===
+2023-10-21 09:59:37,303 P287285 INFO [Metrics] AUC: 0.923207 - logloss: 0.378832
+2023-10-21 09:59:37,303 P287285 INFO Save best model: monitor(max)=0.544375
+2023-10-21 09:59:37,505 P287285 INFO ************ Epoch=2 end ************
+2023-10-21 09:59:41,261 P287285 INFO Train loss: 5.392606
+2023-10-21 09:59:41,262 P287285 INFO Evaluation @epoch 3 - batch 141:
+2023-10-21 09:59:42,847 P287285 INFO ===
+2023-10-21 09:59:42,847 P287285 INFO [Metrics] AUC: 0.921202 - logloss: 0.357302
+2023-10-21 09:59:42,847 P287285 INFO Save best model: monitor(max)=0.563900
+2023-10-21 09:59:43,054 P287285 INFO ************ Epoch=3 end ************
+2023-10-21 09:59:47,504 P287285 INFO Train loss: 5.384401
+2023-10-21 09:59:47,504 P287285 INFO Evaluation @epoch 4 - batch 141:
+2023-10-21 09:59:49,333 P287285 INFO ===
+2023-10-21 09:59:49,333 P287285 INFO [Metrics] AUC: 0.924847 - logloss: 0.335906
+2023-10-21 09:59:49,334 P287285 INFO Save best model: monitor(max)=0.588940
+2023-10-21 09:59:49,604 P287285 INFO ************ Epoch=4 end ************
+2023-10-21 09:59:54,246 P287285 INFO Train loss: 5.394171
+2023-10-21 09:59:54,246 P287285 INFO Evaluation @epoch 5 - batch 141:
+2023-10-21 09:59:56,310 P287285 INFO ===
+2023-10-21 09:59:56,310 P287285 INFO [Metrics] AUC: 0.929047 - logloss: 0.318652
+2023-10-21 09:59:56,310 P287285 INFO Save best model: monitor(max)=0.610395
+2023-10-21 09:59:56,544 P287285 INFO ************ Epoch=5 end ************
+2023-10-21 10:00:01,243 P287285 INFO Train loss: 5.403548
+2023-10-21 10:00:01,243 P287285 INFO Evaluation @epoch 6 - batch 141:
+2023-10-21 10:00:03,508 P287285 INFO ===
+2023-10-21 10:00:03,508 P287285 INFO [Metrics] AUC: 0.934192 - logloss: 0.302778
+2023-10-21 10:00:03,508 P287285 INFO Save best model: monitor(max)=0.631414
+2023-10-21 10:00:03,729 P287285 INFO ************ Epoch=6 end ************
+2023-10-21 10:00:07,607 P287285 INFO Train loss: 5.401405
+2023-10-21 10:00:07,608 P287285 INFO Evaluation @epoch 7 - batch 141:
+2023-10-21 10:00:09,334 P287285 INFO ===
+2023-10-21 10:00:09,334 P287285 INFO [Metrics] AUC: 0.941682 - logloss: 0.286843
+2023-10-21 10:00:09,334 P287285 INFO Save best model: monitor(max)=0.654839
+2023-10-21 10:00:09,524 P287285 INFO ************ Epoch=7 end ************
+2023-10-21 10:00:13,394 P287285 INFO Train loss: 5.396856
+2023-10-21 10:00:13,394 P287285 INFO Evaluation @epoch 8 - batch 141:
+2023-10-21 10:00:14,996 P287285 INFO ===
+2023-10-21 10:00:14,997 P287285 INFO [Metrics] AUC: 0.948550 - logloss: 0.268794
+2023-10-21 10:00:14,997 P287285 INFO Save best model: monitor(max)=0.679756
+2023-10-21 10:00:15,190 P287285 INFO ************ Epoch=8 end ************
+2023-10-21 10:00:19,081 P287285 INFO Train loss: 5.390638
+2023-10-21 10:00:19,081 P287285 INFO Evaluation @epoch 9 - batch 141:
+2023-10-21 10:00:20,982 P287285 INFO ===
+2023-10-21 10:00:20,982 P287285 INFO [Metrics] AUC: 0.952241 - logloss: 0.257106
+2023-10-21 10:00:20,982 P287285 INFO Save best model: monitor(max)=0.695135
+2023-10-21 10:00:21,228 P287285 INFO ************ Epoch=9 end ************
+2023-10-21 10:00:25,798 P287285 INFO Train loss: 5.385012
+2023-10-21 10:00:25,799 P287285 INFO Evaluation @epoch 10 - batch 141:
+2023-10-21 10:00:27,719 P287285 INFO ===
+2023-10-21 10:00:27,719 P287285 INFO [Metrics] AUC: 0.955707 - logloss: 0.252965
+2023-10-21 10:00:27,719 P287285 INFO Save best model: monitor(max)=0.702742
+2023-10-21 10:00:28,005 P287285 INFO ************ Epoch=10 end ************
+2023-10-21 10:00:32,810 P287285 INFO Train loss: 5.380974
+2023-10-21 10:00:32,810 P287285 INFO Evaluation @epoch 11 - batch 141:
+2023-10-21 10:00:34,749 P287285 INFO ===
+2023-10-21 10:00:34,750 P287285 INFO [Metrics] AUC: 0.959165 - logloss: 0.272800
+2023-10-21 10:00:34,750 P287285 INFO Monitor(max)=0.686365 STOP!
+2023-10-21 10:00:34,750 P287285 INFO Reduce learning rate on plateau: 0.000100
+2023-10-21 10:00:34,961 P287285 INFO ************ Epoch=11 end ************
+2023-10-21 10:00:39,570 P287285 INFO Train loss: 5.260831
+2023-10-21 10:00:39,570 P287285 INFO Evaluation @epoch 12 - batch 141:
+2023-10-21 10:00:41,441 P287285 INFO ===
+2023-10-21 10:00:41,441 P287285 INFO [Metrics] AUC: 0.969679 - logloss: 0.204613
+2023-10-21 10:00:41,441 P287285 INFO Save best model: monitor(max)=0.765065
+2023-10-21 10:00:41,668 P287285 INFO ************ Epoch=12 end ************
+2023-10-21 10:00:45,446 P287285 INFO Train loss: 5.150113
+2023-10-21 10:00:45,446 P287285 INFO Evaluation @epoch 13 - batch 141:
+2023-10-21 10:00:47,034 P287285 INFO ===
+2023-10-21 10:00:47,034 P287285 INFO [Metrics] AUC: 0.971203 - logloss: 0.226617
+2023-10-21 10:00:47,034 P287285 INFO Monitor(max)=0.744586 STOP!
+2023-10-21 10:00:47,035 P287285 INFO Reduce learning rate on plateau: 0.000010
+2023-10-21 10:00:47,242 P287285 INFO ************ Epoch=13 end ************
+2023-10-21 10:00:51,015 P287285 INFO Train loss: 5.103737
+2023-10-21 10:00:51,015 P287285 INFO Evaluation @epoch 14 - batch 141:
+2023-10-21 10:00:52,681 P287285 INFO ===
+2023-10-21 10:00:52,681 P287285 INFO [Metrics] AUC: 0.972226 - logloss: 0.194224
+2023-10-21 10:00:52,681 P287285 INFO Save best model: monitor(max)=0.778002
+2023-10-21 10:00:52,882 P287285 INFO ************ Epoch=14 end ************
+2023-10-21 10:00:56,876 P287285 INFO Train loss: 5.098130
+2023-10-21 10:00:56,877 P287285 INFO Evaluation @epoch 15 - batch 141:
+2023-10-21 10:00:59,030 P287285 INFO ===
+2023-10-21 10:00:59,031 P287285 INFO [Metrics] AUC: 0.971884 - logloss: 0.199356
+2023-10-21 10:00:59,031 P287285 INFO Monitor(max)=0.772528 STOP!
+2023-10-21 10:00:59,031 P287285 INFO Reduce learning rate on plateau: 0.000001
+2023-10-21 10:00:59,300 P287285 INFO ************ Epoch=15 end ************
+2023-10-21 10:01:04,159 P287285 INFO Train loss: 5.094462
+2023-10-21 10:01:04,159 P287285 INFO Evaluation @epoch 16 - batch 141:
+2023-10-21 10:01:06,392 P287285 INFO ===
+2023-10-21 10:01:06,392 P287285 INFO [Metrics] AUC: 0.970254 - logloss: 0.216170
+2023-10-21 10:01:06,392 P287285 INFO Monitor(max)=0.754084 STOP!
+2023-10-21 10:01:06,392 P287285 INFO Reduce learning rate on plateau: 0.000001
+2023-10-21 10:01:06,392 P287285 INFO ********* Epoch==16 early stop *********
+2023-10-21 10:01:06,611 P287285 INFO Training finished.
+2023-10-21 10:01:06,612 P287285 INFO Load best model: /root/autodl-tmp/model_zoo/CETN/CETN_torch/checkpoints/Movielenslatest_x1_h5/CETN_Movielens_3757_578e4710.model
+2023-10-21 10:01:06,619 P287285 INFO ****** Validation evaluation ******
+2023-10-21 10:01:08,781 P287285 INFO ===
+2023-10-21 10:01:08,781 P287285 INFO [Metrics] logloss: 0.194224 - AUC: 0.972226
+2023-10-21 10:01:08,822 P287285 INFO ******** Test evaluation ********
+2023-10-21 10:01:08,822 P287285 INFO Loading data...
+2023-10-21 10:01:08,822 P287285 INFO Loading data from h5: ../../../data/Movielenslatest_x1_h5/test.h5
+2023-10-21 10:01:08,825 P287285 INFO Test samples: total/200686, blocks/1
+2023-10-21 10:01:08,826 P287285 INFO Loading test data done.
+2023-10-21 10:01:10,246 P287285 INFO ===
+2023-10-21 10:01:10,246 P287285 INFO [Metrics] logloss: 0.193801 - AUC: 0.972377
