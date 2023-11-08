@@ -12,8 +12,9 @@ scikit-learn
 numpy  
 h5py  
 tqdm  
-## Architectures of AutoGIM
-![image](https://github.com/salmon1802/CETN/assets/73091798/706cd1b1-81a7-4a0e-b056-4ca1e11125a0)
+## Experiment results
+![image](https://github.com/salmon1802/CETN/assets/73091798/1380f42a-8c71-488d-890d-6deefcdcf254)
+
 
 ## Datasets
 Get the datasets from https://github.com/openbenchmark/BARS/tree/main/datasets
