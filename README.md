@@ -13,7 +13,9 @@ numpy
 h5py  
 tqdm  
 ## Experiment results
-![image](https://github.com/salmon1802/CETN/assets/73091798/1380f42a-8c71-488d-890d-6deefcdcf254)
+![image](https://github.com/salmon1802/CETN/assets/73091798/d02a3d3e-d89d-4a2b-bcd5-9922af07d9fa)
+![image](https://github.com/salmon1802/CETN/assets/73091798/9aed6a44-39dc-467e-93f9-645bb1912a72)
+
 
 
 ## Datasets
