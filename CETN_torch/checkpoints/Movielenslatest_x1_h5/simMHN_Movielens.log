@@ -1,0 +1,178 @@
+2023-11-15 22:25:11,307 P158302 INFO Params: {
+    "batch_norm": "False",
+    "batch_size": "10000",
+    "data_format": "h5",
+    "data_root": "../../../data/",
+    "dataset_id": "Movielenslatest_x1_h5",
+    "debug_mode": "False",
+    "early_stop_patience": "2",
+    "embedding_dim": "20",
+    "embedding_regularizer": "0.01",
+    "epochs": "100",
+    "eval_steps": "None",
+    "feature_cols": "[{'active': True, 'dtype': 'float', 'name': ['user_id', 'item_id', 'tag_id'], 'type': 'categorical'}]",
+    "feature_config": "None",
+    "feature_specs": "None",
+    "fi_hidden_units": "[400, 400, 400]",
+    "gpu": "0",
+    "group_id": "None",
+    "hidden_activations": "relu",
+    "label_col": "{'dtype': 'float', 'name': 'label'}",
+    "learning_rate": "0.001",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "2",
+    "model": "AP_DNN",
+    "model_id": "DNN_20_AP_Movielens",
+    "model_root": "./checkpoints/",
+    "monitor": "{'AUC': 1, 'logloss': -1}",
+    "monitor_mode": "max",
+    "net_dropout": "0.3",
+    "net_regularizer": "0",
+    "num_workers": "4",
+    "optimizer": "adam",
+    "pickle_feature_encoder": "True",
+    "save_best_only": "True",
+    "seed": "2023",
+    "shuffle": "True",
+    "task": "binary_classification",
+    "test_data": "../../../data/Movielenslatest_x1_h5/test.h5",
+    "train_data": "../../../data/Movielenslatest_x1_h5/train.h5",
+    "use_features": "None",
+    "valid_data": "../../../data/Movielenslatest_x1_h5/valid.h5",
+    "verbose": "1",
+    "w_hidden_units": "[400, 200]"
+}
+2023-11-15 22:25:11,308 P158302 INFO Load feature_map from json: ../../../data/Movielenslatest_x1_h5/feature_map.json
+2023-11-15 22:25:11,308 P158302 INFO Set column index...
+2023-11-15 22:25:11,308 P158302 INFO Feature specs: {
+    "item_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 22574, 'vocab_size': 22575}",
+    "tag_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 49658, 'vocab_size': 49659}",
+    "user_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 16361, 'vocab_size': 16362}"
+}
+2023-11-15 22:25:14,250 P158302 INFO Total number of parameters: 3127926.
+2023-11-15 22:25:14,250 P158302 INFO Loading data...
+2023-11-15 22:25:14,250 P158302 INFO Loading data from h5: ../../../data/Movielenslatest_x1_h5/train.h5
+2023-11-15 22:25:14,289 P158302 INFO Train samples: total/1404801, blocks/1
+2023-11-15 22:25:14,289 P158302 INFO Loading data from h5: ../../../data/Movielenslatest_x1_h5/valid.h5
+2023-11-15 22:25:14,298 P158302 INFO Validation samples: total/401372, blocks/1
+2023-11-15 22:25:14,298 P158302 INFO Loading train and validation data done.
+2023-11-15 22:25:14,298 P158302 INFO Start training: 141 batches/epoch
+2023-11-15 22:25:14,298 P158302 INFO ************ Epoch=1 start ************
+2023-11-15 22:25:17,408 P158302 INFO Train loss: 0.467224
+2023-11-15 22:25:17,409 P158302 INFO Evaluation @epoch 1 - batch 141: 
+2023-11-15 22:25:18,799 P158302 INFO ===
+2023-11-15 22:25:18,799 P158302 INFO [Metrics] AUC: 0.923752 - logloss: 0.314887
+2023-11-15 22:25:18,800 P158302 INFO Save best model: monitor(max)=0.608866
+2023-11-15 22:25:18,917 P158302 INFO ************ Epoch=1 end ************
+2023-11-15 22:25:22,308 P158302 INFO Train loss: 0.375583
+2023-11-15 22:25:22,309 P158302 INFO Evaluation @epoch 2 - batch 141: 
+2023-11-15 22:25:23,624 P158302 INFO ===
+2023-11-15 22:25:23,624 P158302 INFO [Metrics] AUC: 0.928517 - logloss: 0.306365
+2023-11-15 22:25:23,625 P158302 INFO Save best model: monitor(max)=0.622152
+2023-11-15 22:25:23,739 P158302 INFO ************ Epoch=2 end ************
+2023-11-15 22:25:26,881 P158302 INFO Train loss: 0.369048
+2023-11-15 22:25:26,882 P158302 INFO Evaluation @epoch 3 - batch 141: 
+2023-11-15 22:25:28,205 P158302 INFO ===
+2023-11-15 22:25:28,205 P158302 INFO [Metrics] AUC: 0.934585 - logloss: 0.298872
+2023-11-15 22:25:28,205 P158302 INFO Save best model: monitor(max)=0.635714
+2023-11-15 22:25:28,327 P158302 INFO ************ Epoch=3 end ************
+2023-11-15 22:25:31,598 P158302 INFO Train loss: 0.362265
+2023-11-15 22:25:31,598 P158302 INFO Evaluation @epoch 4 - batch 141: 
+2023-11-15 22:25:32,837 P158302 INFO ===
+2023-11-15 22:25:32,837 P158302 INFO [Metrics] AUC: 0.941226 - logloss: 0.276219
+2023-11-15 22:25:32,837 P158302 INFO Save best model: monitor(max)=0.665007
+2023-11-15 22:25:32,973 P158302 INFO ************ Epoch=4 end ************
+2023-11-15 22:25:36,200 P158302 INFO Train loss: 0.354657
+2023-11-15 22:25:36,200 P158302 INFO Evaluation @epoch 5 - batch 141: 
+2023-11-15 22:25:37,654 P158302 INFO ===
+2023-11-15 22:25:37,654 P158302 INFO [Metrics] AUC: 0.944897 - logloss: 0.268079
+2023-11-15 22:25:37,655 P158302 INFO Save best model: monitor(max)=0.676818
+2023-11-15 22:25:37,786 P158302 INFO ************ Epoch=5 end ************
+2023-11-15 22:25:40,833 P158302 INFO Train loss: 0.354682
+2023-11-15 22:25:40,833 P158302 INFO Evaluation @epoch 6 - batch 141: 
+2023-11-15 22:25:42,167 P158302 INFO ===
+2023-11-15 22:25:42,168 P158302 INFO [Metrics] AUC: 0.948190 - logloss: 0.257380
+2023-11-15 22:25:42,168 P158302 INFO Save best model: monitor(max)=0.690809
+2023-11-15 22:25:42,301 P158302 INFO ************ Epoch=6 end ************
+2023-11-15 22:25:45,957 P158302 INFO Train loss: 0.362033
+2023-11-15 22:25:45,957 P158302 INFO Evaluation @epoch 7 - batch 141: 
+2023-11-15 22:25:47,392 P158302 INFO ===
+2023-11-15 22:25:47,392 P158302 INFO [Metrics] AUC: 0.950905 - logloss: 0.249165
+2023-11-15 22:25:47,392 P158302 INFO Save best model: monitor(max)=0.701741
+2023-11-15 22:25:47,533 P158302 INFO ************ Epoch=7 end ************
+2023-11-15 22:25:50,614 P158302 INFO Train loss: 0.369071
+2023-11-15 22:25:50,614 P158302 INFO Evaluation @epoch 8 - batch 141: 
+2023-11-15 22:25:52,002 P158302 INFO ===
+2023-11-15 22:25:52,002 P158302 INFO [Metrics] AUC: 0.953191 - logloss: 0.243931
+2023-11-15 22:25:52,002 P158302 INFO Save best model: monitor(max)=0.709260
+2023-11-15 22:25:52,120 P158302 INFO ************ Epoch=8 end ************
+2023-11-15 22:25:55,271 P158302 INFO Train loss: 0.373266
+2023-11-15 22:25:55,271 P158302 INFO Evaluation @epoch 9 - batch 141: 
+2023-11-15 22:25:56,574 P158302 INFO ===
+2023-11-15 22:25:56,574 P158302 INFO [Metrics] AUC: 0.955070 - logloss: 0.236349
+2023-11-15 22:25:56,574 P158302 INFO Save best model: monitor(max)=0.718721
+2023-11-15 22:25:56,713 P158302 INFO ************ Epoch=9 end ************
+2023-11-15 22:26:00,038 P158302 INFO Train loss: 0.378280
+2023-11-15 22:26:00,038 P158302 INFO Evaluation @epoch 10 - batch 141: 
+2023-11-15 22:26:01,357 P158302 INFO ===
+2023-11-15 22:26:01,357 P158302 INFO [Metrics] AUC: 0.956571 - logloss: 0.231774
+2023-11-15 22:26:01,358 P158302 INFO Save best model: monitor(max)=0.724798
+2023-11-15 22:26:01,497 P158302 INFO ************ Epoch=10 end ************
+2023-11-15 22:26:04,728 P158302 INFO Train loss: 0.382428
+2023-11-15 22:26:04,728 P158302 INFO Evaluation @epoch 11 - batch 141: 
+2023-11-15 22:26:06,184 P158302 INFO ===
+2023-11-15 22:26:06,184 P158302 INFO [Metrics] AUC: 0.958278 - logloss: 0.226581
+2023-11-15 22:26:06,184 P158302 INFO Save best model: monitor(max)=0.731697
+2023-11-15 22:26:06,324 P158302 INFO ************ Epoch=11 end ************
+2023-11-15 22:26:09,546 P158302 INFO Train loss: 0.382939
+2023-11-15 22:26:09,547 P158302 INFO Evaluation @epoch 12 - batch 141: 
+2023-11-15 22:26:10,951 P158302 INFO ===
+2023-11-15 22:26:10,952 P158302 INFO [Metrics] AUC: 0.958564 - logloss: 0.226212
+2023-11-15 22:26:10,952 P158302 INFO Save best model: monitor(max)=0.732352
+2023-11-15 22:26:11,090 P158302 INFO ************ Epoch=12 end ************
+2023-11-15 22:26:14,251 P158302 INFO Train loss: 0.382356
+2023-11-15 22:26:14,252 P158302 INFO Evaluation @epoch 13 - batch 141: 
+2023-11-15 22:26:15,659 P158302 INFO ===
+2023-11-15 22:26:15,660 P158302 INFO [Metrics] AUC: 0.960357 - logloss: 0.220799
+2023-11-15 22:26:15,660 P158302 INFO Save best model: monitor(max)=0.739558
+2023-11-15 22:26:15,801 P158302 INFO ************ Epoch=13 end ************
+2023-11-15 22:26:18,876 P158302 INFO Train loss: 0.382385
+2023-11-15 22:26:18,876 P158302 INFO Evaluation @epoch 14 - batch 141: 
+2023-11-15 22:26:20,106 P158302 INFO ===
+2023-11-15 22:26:20,106 P158302 INFO [Metrics] AUC: 0.960880 - logloss: 0.222255
+2023-11-15 22:26:20,106 P158302 INFO Monitor(max)=0.738625 STOP!
+2023-11-15 22:26:20,106 P158302 INFO Reduce learning rate on plateau: 0.000100
+2023-11-15 22:26:20,183 P158302 INFO ************ Epoch=14 end ************
+2023-11-15 22:26:23,289 P158302 INFO Train loss: 0.269666
+2023-11-15 22:26:23,290 P158302 INFO Evaluation @epoch 15 - batch 141: 
+2023-11-15 22:26:24,541 P158302 INFO ===
+2023-11-15 22:26:24,541 P158302 INFO [Metrics] AUC: 0.970305 - logloss: 0.198301
+2023-11-15 22:26:24,541 P158302 INFO Save best model: monitor(max)=0.772003
+2023-11-15 22:26:24,676 P158302 INFO ************ Epoch=15 end ************
+2023-11-15 22:26:27,825 P158302 INFO Train loss: 0.168179
+2023-11-15 22:26:27,826 P158302 INFO Evaluation @epoch 16 - batch 141: 
+2023-11-15 22:26:29,319 P158302 INFO ===
+2023-11-15 22:26:29,320 P158302 INFO [Metrics] AUC: 0.972177 - logloss: 0.218125
+2023-11-15 22:26:29,320 P158302 INFO Monitor(max)=0.754052 STOP!
+2023-11-15 22:26:29,320 P158302 INFO Reduce learning rate on plateau: 0.000010
+2023-11-15 22:26:29,387 P158302 INFO ************ Epoch=16 end ************
+2023-11-15 22:26:32,466 P158302 INFO Train loss: 0.116692
+2023-11-15 22:26:32,466 P158302 INFO Evaluation @epoch 17 - batch 141: 
+2023-11-15 22:26:33,753 P158302 INFO ===
+2023-11-15 22:26:33,754 P158302 INFO [Metrics] AUC: 0.972081 - logloss: 0.242187
+2023-11-15 22:26:33,754 P158302 INFO Monitor(max)=0.729894 STOP!
+2023-11-15 22:26:33,754 P158302 INFO Reduce learning rate on plateau: 0.000001
+2023-11-15 22:26:33,754 P158302 INFO ********* Epoch==17 early stop *********
+2023-11-15 22:26:33,831 P158302 INFO Training finished.
+2023-11-15 22:26:33,831 P158302 INFO Load best model: /mnt/public/lhh/code/model_zoo/DNN_plus/DNN_torch/checkpoints/Movielenslatest_x1_h5/DNN_20_AP_Movielens.model
+2023-11-15 22:26:33,845 P158302 INFO ****** Validation evaluation ******
+2023-11-15 22:26:35,186 P158302 INFO ===
+2023-11-15 22:26:35,186 P158302 INFO [Metrics] logloss: 0.198301 - AUC: 0.970305
+2023-11-15 22:26:35,237 P158302 INFO ******** Test evaluation ********
+2023-11-15 22:26:35,237 P158302 INFO Loading data...
+2023-11-15 22:26:35,237 P158302 INFO Loading data from h5: ../../../data/Movielenslatest_x1_h5/test.h5
+2023-11-15 22:26:35,242 P158302 INFO Test samples: total/200686, blocks/1
+2023-11-15 22:26:35,242 P158302 INFO Loading test data done.
+2023-11-15 22:26:36,011 P158302 INFO ===
+2023-11-15 22:26:36,011 P158302 INFO [Metrics] logloss: 0.199238 - AUC: 0.970165
