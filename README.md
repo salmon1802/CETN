@@ -1,6 +1,6 @@
 # CETN: Contrast-enhanced Through Network for CTR
 ## Model Overview
-![image](https://github.com/salmon1802/CETN/assets/73091798/d1966de7-7512-4d3b-9ce3-db5228c97654)
+![image](https://github.com/salmon1802/CETN/assets/73091798/d54be416-ba54-4e91-99fa-c814cca062c5)
 
 ## Requirements
 python>=3.6  
