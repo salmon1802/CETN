@@ -19,7 +19,7 @@ tqdm
 
 
 ## Datasets
-Get the datasets from https://github.com/openbenchmark/BARS/tree/main/datasets
+Get the datasets from https://github.com/reczoo/Datasets
 
 ## Hyperparameter settings and logs
 Get the result from https://github.com/salmon1802/CETN/tree/main/CETN_torch/checkpoints
