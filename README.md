@@ -1,4 +1,4 @@
-If you have any questions, feel free to ask!:)
+If you have any questions, feel free to ask!  :)
 
 # CETN: Contrast-enhanced Through Network for CTR
 ## Model Overview
