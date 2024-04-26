@@ -1,3 +1,5 @@
+If you have any questions, feel free to ask!:)
+
 # CETN: Contrast-enhanced Through Network for CTR
 ## Model Overview
 ![image](https://github.com/salmon1802/CETN/assets/73091798/d54be416-ba54-4e91-99fa-c814cca062c5)
