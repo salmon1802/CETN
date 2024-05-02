@@ -1,0 +1,214 @@
+Base:
+    model_root: './checkpoints/'
+    num_workers: 4
+    verbose: 1
+    early_stop_patience: 2
+    pickle_feature_encoder: True
+    save_best_only: True
+    eval_steps: null
+    debug_mode: False
+    group_id: null
+    use_features: null
+    feature_specs: null
+    feature_config: null
+
+CL4CTR_kuaivideo_x1: # This is a config template
+    model: CL4CTR
+    dataset_id: kuaivideo_x1
+    loss: 'binary_crossentropy'
+    metrics: ['logloss', 'AUC']
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.e-3
+    embedding_regularizer: 5.e-4
+    net_regularizer: 0
+    batch_size: 10000
+    embedding_dim: 64
+    hidden_units: [400, 400, 400]
+    FI_encode_units: [400, 400, 400]
+    hidden_activations: relu
+    net_dropout: 0.2
+    alpha: 1
+    beta: 0.01
+    batch_norm: True
+    epochs: 100
+    shuffle: True
+    seed: 2023
+    monitor: {'AUC': 1, 'logloss': -1}
+    monitor_mode: 'max'
+
+CL4CTR_microvideo1.7m_x1: # This is a config template
+    model: CL4CTR
+    dataset_id: microvideo1.7m_x1
+    loss: 'binary_crossentropy'
+    metrics: ['logloss', 'AUC']
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.e-3
+    embedding_regularizer: 5.e-4
+    net_regularizer: 0
+    batch_size: 10000
+    embedding_dim: 64
+    hidden_units: [400, 400, 400]
+    FI_encode_units: [400, 400, 400]
+    hidden_activations: relu
+    net_dropout: 0.2
+    alpha: 1
+    beta: 0.01
+    batch_norm: True
+    epochs: 100
+    shuffle: True
+    seed: 2023
+    monitor: {'AUC': 1, 'logloss': -1}
+    monitor_mode: 'max'
+
+CL4CTR: # This is a config template
+    model: CL4CTR
+    dataset_id: Avazu_x4_h5
+    loss: 'binary_crossentropy'
+    metrics: ['logloss', 'AUC']
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.e-3
+    embedding_regularizer: 0
+    net_regularizer: 0
+    batch_size: 10000
+    embedding_dim: 20
+    hidden_units: [400, 400, 400]
+    FI_encode_units: [400, 400, 400]
+    hidden_activations: relu
+    net_dropout: 0
+    alpha: 1
+    beta: 0.01
+    batch_norm: False
+    epochs: 100
+    shuffle: True
+    seed: 2023
+    monitor: {'AUC': 1, 'logloss': -1}
+    monitor_mode: 'max'
+
+CL4CTR_criteo: # This is a config template
+    model: CL4CTR
+    dataset_id: Criteo_x4_h5
+    loss: 'binary_crossentropy'
+    metrics: ['logloss', 'AUC']
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.e-3
+    embedding_regularizer: 1.e-5
+    net_regularizer: 0
+    batch_size: 10000
+    embedding_dim: 20
+    hidden_units: [400, 400, 400]
+    FI_encode_units: [400, 400, 400]
+    hidden_activations: relu
+    net_dropout: 0.2
+    alpha: 1
+    beta: 0.01
+    batch_norm: False
+    epochs: 100
+    shuffle: True
+    seed: 2023
+    monitor: {'AUC': 1, 'logloss': -1}
+    monitor_mode: 'max'
+
+
+CL4CTR_Movielenslatest_x1_h5: # This is a config template
+    model: CL4CTR
+    dataset_id: Movielenslatest_x1_h5
+    loss: 'binary_crossentropy'
+    metrics: ['logloss', 'AUC']
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.e-3
+    embedding_regularizer: 1.e-2
+    net_regularizer: 0
+    batch_size: 10000
+    embedding_dim: 20
+    hidden_units: [400, 400, 400]
+    FI_encode_units: [400, 400, 400]
+    hidden_activations: relu
+    net_dropout: 0.3
+    alpha: 1
+    beta: 0.01
+    batch_norm: True
+    epochs: 100
+    shuffle: True
+    seed: 2023
+    monitor: {'AUC': 1, 'logloss': -1}
+    monitor_mode: 'max'
+
+CL4CTR_Frappe_x1_h5: # This is a config template
+    model: CL4CTR
+    dataset_id: Frappe_x1_h5
+    loss: 'binary_crossentropy'
+    metrics: ['logloss', 'AUC']
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.e-3
+    embedding_regularizer: 5.e-2
+    net_regularizer: 0
+    batch_size: 10000
+    embedding_dim: 20
+    hidden_units: [400, 400, 400]
+    FI_encode_units: [400, 400, 400]
+    hidden_activations: relu
+    net_dropout: 0.3
+    alpha: 1
+    beta: 0.01
+    batch_norm: True
+    epochs: 100
+    shuffle: True
+    seed: 2023
+    monitor: {'AUC': 1, 'logloss': -1}
+    monitor_mode: 'max'
+
+CL4CTR_ML-1M: # This is a config template
+    model: CL4CTR
+    dataset_id: ML-1M
+    loss: 'binary_crossentropy'
+    metrics: ['logloss', 'AUC']
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.e-3
+    embedding_regularizer: 1.e-2
+    net_regularizer: 0
+    batch_size: 10000
+    embedding_dim: 16
+    hidden_units: [400, 400, 400]
+    FI_encode_units: [400, 400]
+    hidden_activations: relu
+    net_dropout: 0.2
+    alpha: 1
+    beta: 0.01
+    batch_norm: True
+    epochs: 100
+    shuffle: True
+    seed: 2023
+    monitor: {'AUC': 1, 'logloss': -1}
+    monitor_mode: 'max'
+
+CL4CTR_KKBox_x1_h5: # This is a config template
+    model: CL4CTR
+    dataset_id: KKBox_x1_h5
+    loss: 'binary_crossentropy'
+    metrics: ['logloss', 'AUC']
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.e-3
+    embedding_regularizer: 5.e-4
+    net_regularizer: 0
+    batch_size: 10000
+    embedding_dim: 16
+    hidden_units: [400, 400, 400]
+    FI_encode_units: [400, 400]
+    hidden_activations: relu
+    net_dropout: 0.2
+    alpha: 1
+    beta: 0.01
+    batch_norm: True
+    epochs: 100
+    shuffle: True
+    seed: 2023
+    monitor: {'AUC': 1, 'logloss': -1}
+    monitor_mode: 'max'
