@@ -35,11 +35,6 @@ class CL4CTR(BaseModel):
         self.embedding_layer = FeatureEmbedding(feature_map, embedding_dim)
         self.embedding_dim = embedding_dim
         self.num_fields = feature_map.num_fields
-        self.ep_dim = int(self.num_fields * (self.num_fields + 1) / 2) * self.embedding_dim
-        self.ip_dim = int(self.num_fields * (self.num_fields + 1) / 2)
-        self.flatten_dim = feature_map.sum_emb_out_dim()
-        self.triu_node_index = nn.Parameter(torch.triu_indices(self.num_fields, self.num_fields, offset=0),
-                                            requires_grad=False)
         self.mlp_prediction = MLP_Block(input_dim=self.flatten_dim,
                               output_dim=1,
                               hidden_units=hidden_units,
