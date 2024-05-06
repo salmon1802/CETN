@@ -35,6 +35,7 @@ class CL4CTR(BaseModel):
         self.embedding_layer = FeatureEmbedding(feature_map, embedding_dim)
         self.embedding_dim = embedding_dim
         self.num_fields = feature_map.num_fields
+        self.flatten_dim = feature_map.sum_emb_out_dim()
         self.mlp_prediction = MLP_Block(input_dim=self.flatten_dim,
                               output_dim=1,
                               hidden_units=hidden_units,
