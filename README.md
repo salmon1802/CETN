@@ -30,3 +30,15 @@ Get the result from https://github.com/salmon1802/CETN/tree/main/CETN_torch/chec
 This implementation is based on FuxiCTR and BARS. Thanks for their sharing and contribution.  
 BARS: https://github.com/openbenchmark  
 FuxiCTR: https://github.com/xue-pai/FuxiCTR
+
+## Citation
+If you find our code helpful for your research, please cite the following paper:
+
+```bibtex
+@article{li2023cetn,
+  title={CETN: Contrast-enhanced Through Network for CTR Prediction},
+  author={Li, Honghao and Sang, Lei and Zhang, Yi and Zhang, Xuyun and Zhang, Yiwen},
+  journal={arXiv preprint arXiv:2312.09715},
+  year={2023}
+}
+```
